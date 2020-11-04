@@ -2,7 +2,8 @@
 header('Content-type: application/json');
 
 $uploaddir = 'upload/'; //physical address of uploads directory
-$name = 'aslinbeauty-'.date("Y-m-d-h-i-s").'.png';
+$nameproduct = $_POST['name'];
+$name = 'aslinbeauty-'.$nameproduct.'-'.date("Y-m-d-h-i-s").'.png';
 $uploadfile = $uploaddir . basename($name);
 // print_r(basename($_FILES['myFile']['name']));
 
@@ -10,7 +11,8 @@ $uploadfile = $uploaddir . basename($name);
         $array=array(
             'code' => 200,
             'message' => 'Success upload',
-            'link' => 'http://rikzanx.online/'.$uploadfile
+            'link' => 'http://rikzanx.online/'.$uploadfile,
+            'data' => $_POST
         );
     // echo "File was successfully uploaded.\n";
     /* Your file is uploaded into your server and you can do what ever you want with */
