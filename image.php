@@ -2,7 +2,7 @@
 header('Content-type: application/json');
 
 $uploaddir = 'upload/'; //physical address of uploads directory
-$name = 'aslinbeauty-'.date("Y-m-d h-i-s").'.png';
+$name = 'aslinbeauty-'.date("Y-m-d-h-i-s").'.png';
 $uploadfile = $uploaddir . basename($name);
 // print_r(basename($_FILES['myFile']['name']));
 
